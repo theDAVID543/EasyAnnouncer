@@ -1,0 +1,12 @@
+name: EasyAnnouncer
+version: '${project.version}'
+main: the.easyannouncer.Main
+api-version: '1.20'
+permissions: {}
+description: "A announce plugin"
+commands:
+  easyannouncer:
+    aliases:
+      - ea
+depend:
+  - PlaceholderAPI
