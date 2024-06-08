@@ -17,7 +17,7 @@ public class PermissionManager{
 		permissions.clear();
 		CommandManager.subCommands.forEach((k, subCommand) -> {
 			PermissionManager.parsePermission(subCommand.permission()).forEach(permissionName -> {
-				DebugOutput.sendDebugOutput(permissionName);
+//				DebugOutput.sendDebugOutput(permissionName);
 				if(Bukkit.getPluginManager().getPermission(permissionName) == null){
 					Permission permission = new Permission(permissionName);
 					Bukkit.getPluginManager().addPermission(permission);

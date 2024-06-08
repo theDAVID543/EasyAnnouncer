@@ -5,6 +5,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.NotNull;
+import the.easyannouncer.command.commands.About;
 import the.easyannouncer.command.commands.PreviewAnnounce;
 import the.easyannouncer.command.commands.Reload;
 import the.easyannouncer.command.commands.ToggleAnnounceGroup;
@@ -24,6 +25,7 @@ public class CommandManager implements CommandExecutor{
 		put("reload", new Reload());
 		put("toggle {announceGroup} (boolean)", new ToggleAnnounceGroup());
 		put("preview {announce}", new PreviewAnnounce());
+		put("about", new About());
 	}};
 
 	@Override
