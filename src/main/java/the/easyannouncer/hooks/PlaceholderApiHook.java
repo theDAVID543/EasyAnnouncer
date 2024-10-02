@@ -27,6 +27,11 @@ public class PlaceholderApiHook extends PlaceholderExpansion{
 	}
 
 	@Override
+	public boolean persist() {
+		return true;
+	}
+
+	@Override
 	public String onRequest(OfflinePlayer player, @NotNull String params){
 		String[] args = params.split("_");
 		if(args[0].equals("receiving")){
