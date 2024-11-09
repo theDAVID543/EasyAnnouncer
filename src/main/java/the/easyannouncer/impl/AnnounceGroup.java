@@ -34,7 +34,8 @@ public class AnnounceGroup{
 		playerToggleReceive.put(player.getUniqueId(), !playerToggleReceive.getOrDefault(player.getUniqueId(), true));
 	}
 
-	public void toggleReceiveMessage(Player player, boolean receive){playerToggleReceive.put(player.getUniqueId(), receive);
+	public void toggleReceiveMessage(Player player, boolean receive){
+		playerToggleReceive.put(player.getUniqueId(), receive);
 	}
 
 	public Boolean isReceiveMessage(Player player){
