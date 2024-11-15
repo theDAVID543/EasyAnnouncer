@@ -13,5 +13,6 @@ public class MessageConfigDefault {
 		put(Message.PLACEHOLDER_TRUE, "YES");
 		put(Message.PLACEHOLDER_FALSE, "NO");
 		put(Message.PLACEHOLDER_NULL, "NULL");
+		put(Message.PREFIX, "<gradient:#fff454:#ffba66>[EasyAnnouncer]</gradient>");
 	}};
 }

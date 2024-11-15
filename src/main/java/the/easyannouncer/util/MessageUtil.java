@@ -26,7 +26,7 @@ public class MessageUtil{
 	}
 
 	public static String parsePlaceholder(Player player, String message){
-		message = message.replaceAll("%prefix%", "<gradient:#fff454:#ffba66>[EasyAnnouncer]</gradient>");
+		message = message.replaceAll("%prefix%", MessageConfigManager.getMessage(Message.PREFIX));
 		message = PlaceholderAPI.setPlaceholders(player, message);
 		return message;
 	}
