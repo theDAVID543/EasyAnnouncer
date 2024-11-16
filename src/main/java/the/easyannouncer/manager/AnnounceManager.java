@@ -5,6 +5,7 @@ import net.kyori.adventure.text.Component;
 import net.kyori.adventure.text.minimessage.MiniMessage;
 import org.bukkit.entity.Player;
 import the.easyannouncer.config.Config;
+import the.easyannouncer.util.MessageUtil;
 
 import java.util.HashMap;
 import java.util.List;
@@ -22,9 +23,10 @@ public class AnnounceManager{
 		Component component = Component.text().build();
 		for(int i = 0; i < messageStringList.size(); i++){
 			String message = messageStringList.get(i);
-			message = PlaceholderAPI.setPlaceholders(player, message);
-			component = component
-					.append(MiniMessage.miniMessage().deserialize(message));
+			component = component.append(MessageUtil.fullParseMessage(player, message));
+//			message = PlaceholderAPI.setPlaceholders(player, message);
+//			component = component
+//					.append(MiniMessage.miniMessage().deserialize(message));
 			if(i < messageStringList.size() - 1){
 				component = component.appendNewline();
 			}
